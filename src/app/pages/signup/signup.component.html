@@ -1,0 +1,131 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <div class="row mt40" > 
+
+              <div class="col-md-6 offset-md-3 ">
+                
+                <mat-card>
+
+
+                <div class="container text-center"  >
+                    <img src="../../../assets/logo.png" alt=""/>
+                </div>
+                <h1 class="text-center">Register here</h1>
+
+
+
+ 
+                <!-- {{user|json}} -->
+
+               <form (ngSubmit)="formSubmit()"> 
+                    
+                <!-- 1-User name Feild -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px;" appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input [(ngModel)]="user.userName"
+                        name="userName"
+                      matInput
+                       required
+                        placeholder="Enter here">
+                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                      <mat-hint>User Name must be Unique*</mat-hint>
+                    </mat-form-field>
+                  
+                    <!--2- firstName -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input [(ngModel)]="user.firstName"
+                        name="firstName"
+                         matInput 
+                         required
+                          placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>
+
+
+                      <!--3- lastName -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px " appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input [(ngModel)]="user.lastName"
+                        name="lastName"
+                        matInput 
+                        required
+                        placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>
+
+                       <!--4- Email -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px " appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input [(ngModel)]="user.email"
+                        name="email"
+                        type="email" 
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" 
+                        matInput 
+                        required
+                        placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <mat-hint> ex - abc123@gmail.com</mat-hint>
+                      </mat-form-field>
+
+                       <!--5- phone -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input [(ngModel)]="user.phone"
+                        name="phone"
+                        pattern="[789][0-9]{9}"
+                         type="number" 
+                         matInput
+                         required
+                          placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <mat-hint>Should Be 10 Numbers</mat-hint>
+                      </mat-form-field>
+
+                       <!-- 6- address
+                    <mat-form-field  class= "full-width"  appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input [(ngModel)]="user.address"
+                        name="address"
+                         matInput placeholder="Enter here">
+                         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      <!-- </mat-form-field> --> 
+
+                    <!--- Password -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 30px"  appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input  [(ngModel)]="user.password"
+                        name="password"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        matInput 
+                        required
+                        placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <mat-hint>Strong Password use special Characters ex-@</mat-hint>
+                      </mat-form-field>
+
+
+                      <div class="container text-center" >
+ 
+                        <button type="submit" mat-raised-button  color="primary">SignUp</button>
+
+                        <button style="margin-left: 150px " mat-raised-button  color="accent">Clear</button>
+
+                      </div>
+
+
+               </form>
+               </mat-card>
+
+            </div> 
+
+
+         </div>
+    </div>
+</div>

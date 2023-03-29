@@ -1,0 +1,62 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+              
+                <mat-card>
+                <div class="container text-center"  >
+                    <img src="../../../assets/login-logo1.png" alt=""/>
+                </div>
+                <h1 class="text-center" >Login Here !!</h1>
+                
+
+                 <!-- {{loginData|json}} -->
+                <form (ngSubmit)="formSubmit()">
+                    <!-- //UserName -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px;" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input 
+                        [(ngModel)]="loginData.userName"
+                        name="userName"
+                        matInput
+                         required
+                          placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <mat-hint>Valid User Name</mat-hint>
+                      </mat-form-field>
+
+
+                      <!-- //Password -->
+                      <mat-form-field  class= "full-width"  appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input 
+
+                        [(ngModel)]="loginData.password"
+                        name="password"
+                        matInput
+                         required
+                       
+                          placeholder="Enter here">
+                         
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <mat-hint></mat-hint>
+                      </mat-form-field>
+                     
+
+                      <div class="container text-center" >
+ 
+                        <button type="submit" mat-raised-button  color="primary">Login</button>
+
+                      <button  class="ml20" mat-raised-button  color="warn">Reset</button> 
+ 
+                          
+                      </div>
+
+                </form>
+            </mat-card>
+
+            </div>
+
+        </div>
+    </div>
+</div>

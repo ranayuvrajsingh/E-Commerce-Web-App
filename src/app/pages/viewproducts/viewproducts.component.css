@@ -1,0 +1,20 @@
+
+mat-grid-tile {
+    background: rgb(232, 232, 230);
+    border: 2px solid rgb(64, 100, 133);
+    border-radius: 5px;
+
+  }
+  
+ 
+  img {  
+    height: 280px;
+    width: 200px;
+  }
+  
+  .home-page-product-image{
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }

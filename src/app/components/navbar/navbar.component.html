@@ -1,0 +1,104 @@
+
+<mat-toolbar  color="primary">
+    <a 
+    routerLink ="/"
+    mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>shopping_bag</mat-icon>
+    </a>
+    <span>RetailWebApp</span>
+    <span class="example-spacer"></span>
+
+    <a 
+    *ngIf="!login.isLoggedIn()"
+    [routerLink]="'/login'" 
+    mat-raised-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+       Login <!-- <mat-icon>login</mat-icon> -->
+    </a>
+
+    <a 
+    *ngIf="!login.isLoggedIn()"
+    [routerLink]="'/signup'"
+    mat-raised-button  class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+      Register <!-- <mat-icon>login</mat-icon> -->
+    </a>
+
+   
+
+    <a 
+    (click)="logout()"
+    *ngIf="login.isLoggedIn()"
+   
+    mat-raised-button class="example-icon favorite-icon mr20 ml20" aria-label="Example icon-button with heart icon">
+     Logout <!-- <mat-icon>login</mat-icon> -->
+    </a>
+
+    <a 
+    
+    *ngIf="login.isLoggedIn()"
+  
+      class="example-icon favorite-icon  ml20" 
+      mat-raised-button
+      routerLink="/admin/profile"
+     
+      aria-label="Example icon-button with heart icon">
+      <!-- {{user.username}}   //change for user login error -->
+    {{login.getUser().username}} <!-- <mat-icon>login</mat-icon> -->
+    </a>
+
+    <!-- <a 
+    
+    *ngIf="login.isLoggedIn()"
+  
+      class="example-icon favorite-icon  ml20" 
+      mat-raised-button
+      routerLink="/userdash/userprofile"
+     
+      aria-label="Example icon-button with heart icon">
+      {{user.username}}   //change for user login error -->
+    <!-- {{login.getUser().username}} <mat-icon>login</mat-icon> -->
+    <!-- </a> --> 
+
+  </mat-toolbar>
+
+<!-- 
+  <mat-toolbar  class="mt20"color="primary">
+
+    <a 
+    routerLink ="/"
+    mat-raised-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon >home</mat-icon>
+    
+    </a>
+   
+    <span class="example-spacer"></span>
+
+
+    <a 
+    routerLink ="/viewproduct"
+    mat-raised-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon >shopping_bag</mat-icon>
+    
+    </a>
+    <a 
+    routerLink ="/productinfo"
+    mat-raised-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon >info</mat-icon>
+    
+    </a>  
+   
+     <span class="example-spacer"></span> 
+
+    
+    <a 
+    routerLink ="/viewcart"
+    mat-raised-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon >shopping_cart</mat-icon>
+    
+    </a> 
+    
+      <span class="example-spacer"></span> 
+
+
+
+  </mat-toolbar>  -->
+  

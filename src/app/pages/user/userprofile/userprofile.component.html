@@ -1,0 +1,65 @@
+<mat-card>
+    <!-- {{user|json}} -->
+<h1 class="table text-center">Your Profile Details</h1>
+<mat-card-content>
+
+ 
+
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+        <div class="container text-center">
+ 
+
+            <img src="https://st3.depositphotos.com/3102403/17634/v/600/depositphotos_176349124-stock-illustration-anonymous-user-circle-icon.jpg"
+            alt=""
+            class="profile-image"
+            >
+            <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+
+        </div>
+        <div class="row">
+
+            <div class="col-md-10 offset-md-1">
+
+                <!-- //tabledetails -->
+                <table id="customers" class="table text-center">
+
+                    <tr>
+                        <td>Username</td>
+                        <td>{{user.userName}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>UserId</td>
+                        <td>{{user.id}}</td>
+                    </tr>
+
+                    <tr *ngIf="user.phone">
+                        <td>Phone</td>
+                        <td>{{user.phone}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Role</td>
+                        <td>{{user.authorities[0].authority}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Status</td>
+                        <td>{{user.enabled}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</mat-card-content>
+<mat-card-actions class="text-center 
+">
+    <!-- <button mat-raised-button color="primary" >Update</button>
+    <button  mat-raised-button color="accent"></button> -->
+  </mat-card-actions>
+
+</mat-card>

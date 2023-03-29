@@ -1,0 +1,35 @@
+
+<h1  class="text-center">ProductDetails</h1>
+<table >
+<thead id="customers">
+<tr>
+<th>ProductName</th>
+<th>Desciption</th>
+<th>In Stock</th>
+<th>Review</th>
+<!-- <th>Update</th> -->
+<th>Action</th>
+
+
+
+<!-- {{productList|json}} -->
+
+</tr>
+</thead>
+<tbody id="customers">
+  <tr *ngFor="let p of productList">
+  <td>{{p.productName}}</td>
+  <td>{{p.description}}</td>
+  <td>{{p.availability}}</td>
+  <td>{{p.review}}</td>
+  <!-- <td><button (click)="updateProduct(p.id)"
+    >Update</button></td> -->
+    <td><button (click)="deleteProduct(p.id)"
+      >Delete</button></td>
+
+  
+  </tr>
+
+</tbody>
+
+</table>

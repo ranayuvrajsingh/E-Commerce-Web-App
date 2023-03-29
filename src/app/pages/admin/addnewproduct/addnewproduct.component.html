@@ -1,0 +1,117 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <div class="row mt40" > 
+
+              <div class="col-md-6 offset-md-3 ">
+                
+                <mat-card>
+
+
+                <div class="container text-center"  >
+                    <img src="../../../assets/addproduct.png" alt=""/>
+                  
+                </div>
+                <h1 class="text-center">Add Product</h1>
+
+
+
+ 
+                <!-- {{user|json}} -->
+
+               <form (ngSubmit)="formSubmit()"> 
+                    
+                <!-- 1-User name Feild -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px;" appearance="outline">
+                      <mat-label>Productname</mat-label>
+                      <input [(ngModel)]="product.productName"
+                        name="productName"
+                      matInput
+                       required
+                        placeholder="Enter here">
+                      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                      <mat-hint>User Name must be Unique*</mat-hint>
+                    </mat-form-field>
+                  
+                    <!--2- firstName -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px" appearance="outline">
+                        <mat-label>Price</mat-label>
+                        <input [(ngModel)]="product.price"
+                        name="price"
+                         matInput 
+                         required
+                          placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>
+
+
+                      <!--3- lastName -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px " appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <input [(ngModel)]="product.description"
+                        name="description"
+                        type="text-area"
+                        matInput 
+                        required
+                        placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>
+
+
+                       <!--5- phone -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 20px" appearance="outline">
+                        <mat-label>Availability</mat-label>
+                        <input [(ngModel)]="product.availability"
+                        name="availability"
+                         type="text" 
+                         matInput
+                         required
+                          placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>
+
+                       <!-- 6- address
+                    <mat-form-field  class= "full-width"  appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input [(ngModel)]="user.address"
+                        name="address"
+                         matInput placeholder="Enter here">
+                         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      <!-- </mat-form-field> --> 
+
+                    <!--- Password -->
+                    <mat-form-field  class= "full-width" style="margin-bottom: 30px"  appearance="outline">
+                        <mat-label>Review</mat-label>
+                        <input  [(ngModel)]="product.review"
+                        name="review"
+                        matInput 
+                        required
+                        placeholder="Enter here">
+                        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>   // For icons-->
+                        <mat-hint>Should be combination ex -row3i5ng</mat-hint>
+                      </mat-form-field>
+
+
+                      <div class="container text-center" >
+ 
+                        <button type="submit" mat-raised-button  color="primary">Add Product</button>
+
+                        <button style="margin-left: 150px " mat-raised-button  color="accent">Clear</button>
+
+                      </div>
+
+
+               </form>
+               </mat-card>
+
+            </div> 
+
+
+         </div>
+    </div>
+</div>

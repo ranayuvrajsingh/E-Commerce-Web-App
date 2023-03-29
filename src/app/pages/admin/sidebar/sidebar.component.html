@@ -1,0 +1,39 @@
+<mat-toolbar></mat-toolbar>
+<mat-card>
+    
+
+     <mat-action-list>
+         <div mat-subheader>Menu</div>
+        
+         <button mat-list-item routerLink="/admin" ><mat-icon mat-list-icon>home</mat-icon>Home</button>
+         <button mat-list-item routerLink="/admin/profile"><mat-icon mat-list-icon>account_circle</mat-icon>Profile</button>
+         <!-- <button mat-list-item routerLink="/admin/profile"><mat-icon mat-list-icon>category</mat-icon>Categories</button>  
+         <button mat-list-item routerLink="/admin/profile"><mat-icon mat-list-icon>add_circle_outline</mat-icon>AddCategories</button>   -->
+
+         <button mat-list-item routerLink="/admin/viewproduct"><mat-icon mat-list-icon>shopping_bag</mat-icon>Products</button>
+         <button  mat-list-item routerLink="/admin/addnewproduct"><mat-icon mat-list-icon>add_circle</mat-icon>Add Products</button>
+         <button  mat-list-item routerLink="/admin/deleteproduct"><mat-icon mat-list-icon>info</mat-icon>ProductDetails</button>
+
+
+         <button mat-list-item routerLink="/admin/profile"><mat-icon mat-list-icon>shopping_cart</mat-icon>Cart</button>
+
+         <button mat-list-item (click)="logout()"
+         *ngIf="login.isLoggedIn()" routerLink="/admin/profile"><mat-icon mat-list-icon>logout</mat-icon>Logout</button>
+ 
+
+  
+</mat-action-list>
+
+
+
+</mat-card>
+
+
+
+
+
+
+ 
+ 
+ 
+

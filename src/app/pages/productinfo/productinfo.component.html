@@ -1,0 +1,56 @@
+<h1  class="text-center">ProductDetails</h1>
+<table >
+<thead id="customers">
+<tr>
+<th>ProductName</th>
+<th>Desciption</th>
+<th>In Stock</th>
+<th>Review</th>
+
+
+
+</tr>
+</thead>
+<tbody id="customers">
+  <tr *ngFor="let p of productList">
+  <td>{{p.productName}}</td>
+  <td>{{p.description}}</td>
+  <td>{{p.availability}}</td>
+  <td>{{p.review}}</td>
+
+
+
+  </tr>
+
+</tbody>
+
+</table>
+
+
+<!-- <mat-card>
+   {{productList|json}}  
+     <mat-list>
+        <div mat-subheader>ProductInfo</div>
+        <mat-list-item *ngFor="let p of productList">
+           
+
+          <a routerLink="/description" routerLink="/description"> <mat-icon mat-list-icon>info</mat-icon></a> 
+            <div mat-line >{{p.productName}}</div>
+            <div class="ml20">{{p.description}}</div> 
+            <div class="ml20">{{p.review}}</div>
+            
+              
+            
+            <mat-divider></mat-divider>
+
+
+        </mat-list-item>
+    </mat-list>
+    
+</mat-card>  -->
+
+
+
+
+
+
